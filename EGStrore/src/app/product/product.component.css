@@ -1,0 +1,78 @@
+.head-title {
+    display: flex;
+    align-items: center;
+
+    button {
+        transform: scale(0.75);
+    }
+}
+
+h1 {
+    flex-grow: 1;
+}
+
+table {
+    text-align: center;
+
+    .table-cell {
+        vertical-align: top;
+    }
+
+    .button-icon {
+        transform: scale(0.8);
+    }
+}
+
+th.mat-header-cell {
+    text-align: center;
+}
+
+td.mat-cell {
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.mat-column-stt {
+    width: 50px;
+}
+
+.mat-column-prodName {
+    width: 200px;
+}
+
+.mat-column-categoryName {
+    width: 110px;
+}
+
+.mat-column-supName {
+    width: 85px;
+}
+
+.mat-column-status {
+    width: 100px;
+}
+
+.mat-column-price,
+.mat-column-designs {
+    width: 120px;
+}
+
+.mat-column-inventory {
+    width: 50px;
+}
+
+.mat-column-prodImg {
+    width: 80px;
+}
+
+.mat-column-actions {
+    width: 170px;
+}
+
+img {
+    max-width: 70px;
+    max-height: 70px;
+}

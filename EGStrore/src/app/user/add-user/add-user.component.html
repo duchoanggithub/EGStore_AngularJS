@@ -1,0 +1,73 @@
+<div>
+    <h2 mat-dialog-title>Thêm người dùng mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="adduserForm">
+            <div class="row">
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Tài khoản</mat-label>
+                            <input matInput placeholder="Tài khoản" formControlName="userName">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Họ và tên</mat-label>
+                            <input matInput placeholder="Họ và tên" formControlName="name">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>SĐT</mat-label>
+                            <input matInput placeholder="SĐT" formControlName="phone">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Mật khẩu</mat-label>
+                            <input matInput placeholder="Mật khẩu" formControlName="password">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" formControlName="email">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Địa chỉ</mat-label>
+                            <input matInput placeholder="Địa chỉ" formControlName="address">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-radio-group aria-label="Select an option" formControlName="sex">
+                            <mat-label><b>Giới tính:</b></mat-label>
+                            <mat-radio-button value="true">Nam</mat-radio-button>
+                            <mat-radio-button value="false">Nữ</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="input-row">
+                        <mat-checkbox formControlName="isActive">Kích hoạt</mat-checkbox>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Quyền</mat-label>
+                            <mat-select formControlName="roleId">
+                                <mat-option *ngFor="let role of roles" [value]="role.id">
+                                    {{ role.roleName }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

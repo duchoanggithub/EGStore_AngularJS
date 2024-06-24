@@ -1,0 +1,27 @@
+<div class="product-slider">
+    <button class="nav-button" (click)="prevSlide()">
+        <i class="fa fa-arrow-left"></i>
+    </button>
+    <div class="product-wrapper">
+        <div class="product-slide" *ngFor="let product of products[currentSlide]">
+            <a [routerLink]="['/page/detail-category-product', product.id]" class="product-link">
+                <div class="product-card">
+                    <div>
+                        <img [src]="product.prodImg" alt="{{ product.prodName }}" class="product-image">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-name">
+                            <h3>{{ product.prodName }}</h3>
+                        </div>
+                        <div class="product-price">
+                            <span>{{ product.price | number: '1.0-0'}}đ</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <button class="nav-button" (click)="nextSlide()">
+        <i class="fa fa-arrow-right"></i>
+    </button>
+</div>

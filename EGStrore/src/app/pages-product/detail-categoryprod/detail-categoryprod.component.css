@@ -1,0 +1,151 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.left-section, .right-section {
+    width: 48%;
+}
+
+.right-section .colum-1 span{
+    margin-right: 30px;
+    align-items: center;
+}
+
+.image-product {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: 68vh;
+    text-align: center;
+}
+
+.info-product-1{
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.info-product-2 {
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.info-product-3{
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.colum {
+    margin-bottom: 10px;
+}
+
+.colum p {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.row span {
+    flex: 1; 
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+}
+.price-label{
+    font-size: 14px;
+}
+
+.price-value {
+    color: red; 
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+.price-info{
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+.img-price{
+    height: 18px;
+}
+
+mat-divider {
+    margin: 20px 0;
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+}
+.color-label {
+    font-size: 14px;
+}
+.color-value {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px 10px; 
+    margin-left: 20px; 
+}
+
+.promotion-container {
+    border: 2px dashed red; /* Thiết lập viền đứt màu đỏ */
+    border-radius: 10px; /* Bo tròn góc của khung */
+    padding: 10px; /* Thêm padding để tạo khoảng cách giữa nội dung và khung */
+    margin-bottom: 20px;
+}
+.promotion-container span {
+    display: block; /* Để các đoạn văn bản xuống dòng */
+    margin-bottom: 10px; /* Thêm khoảng cách giữa các đoạn văn bản */
+}
+.icon-gift{
+    color: rgb(206, 1, 1);
+    font-size: 18px;
+}
+
+.container-cart {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    margin: 0 5px; 
+}
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.fa-gift {
+    margin-right: 5px;
+}
+

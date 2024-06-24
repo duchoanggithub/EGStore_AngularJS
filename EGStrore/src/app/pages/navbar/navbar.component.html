@@ -1,0 +1,100 @@
+<header>
+    <div class="wrapper-header">
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <div class="wrapper-logo">
+                    <a routerLink="/page/home">
+                        <span class="title-logo">
+                            <img src="../../../assets/logo.png" alt="" (click)="home()"
+                                style="height: 40px; width: 150px;">
+                        </span>
+                    </a>
+                </div>
+                <div class="wrapper-search">
+                    <div class="search-container">
+                        <input type="search" [(ngModel)]="searchKeyword" (input)="search()" class="search"
+                            placeholder="Search..." />
+                        <i class="far fa-search search-icon"></i>
+                    </div>
+                    <ul *ngIf="searchResults.length > 0" class="search-results">
+                        <li *ngFor="let product of searchResults" (click)="goToProductDetail(product.id)">
+                            <img [src]="product.prodImg"  class="product-image">
+                            {{ product.prodName }}
+                        </li>
+                    </ul>
+                    <div *ngIf="searchResults.length === 0 && searchKeyword.trim() !== ''" class="no-results">
+                        Không tìm thấy sản phẩm nào.
+                    </div>
+                </div>
+                <div class="wrapper-compo-head" cdkMenu>
+                    <div class="wrapper-account" *ngIf="isLoggedIn; else loginRegister">
+                        <i mat-button [matMenuTriggerFor]="menu" class="fa fa-user"></i>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item cdkMenuItem (click)="navigateToProfile()">
+                                <mat-icon><i class="fa fa-address-card"></i></mat-icon>
+                                Profile
+                            </button>
+                            <button mat-menu-item cdkMenuItem>
+                                <mat-icon><i class="fa fa-clipboard"></i></mat-icon>
+                                Order
+                            </button>
+                            <button mat-menu-item (click)="logout()" cdkMenuItem>
+                                <mat-icon><i class="fa fa-right-to-bracket"></i></mat-icon>
+                                Logout
+                            </button>
+                        </mat-menu>
+                    </div>
+                    <ng-template #loginRegister>
+                        <button mat-button (click)="navigateToLogin()">Login</button>
+                        <button mat-button (click)="navigateToLogin()">Register</button>
+                    </ng-template>
+                    <div class="wrapper-cart">
+                        <button mat-icon-button class="example-icon" (click)="navigateToCart()">
+                            <i class="fa fa-cart-shopping"></i>
+                            <mat-icon>cart</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <div class="wrapper-menu">
+        <div class="contrainer">
+            <ul>
+                <li class="menu-list">
+                    <button routerLink="/page/all-product">Tất cả sản phẩm</button>
+                </li>
+                <li class="menu-list">
+                    <button [routerLink]="['/page/glasses-product', '8fce5d50-4501-48f5-9637-dd4034e7db5c']">Gọng
+                        kính</button>
+                </li>
+                <li class="menu-list">
+                    <button [routerLink]="['/page/sunglass-product', '86435238-910e-42f2-a0c1-4efbc3c2e05e']">Kính
+                        mát</button>
+                </li>
+                <li class="menu-list">
+                    <button [routerLink]="['/page/lens-product', '058ec65d-01f8-4686-b76e-7b50296f1970']">Kính áp
+                        tròng</button>
+                </li>
+                <li class="menu-list">
+                    <button mat-button [matMenuTriggerFor]="supplier">Thương hiệu</button>
+                    <mat-menu #supplier="matMenu">
+                        <button mat-menu-item
+                            [routerLink]="['/page/amo', '53b18442-e9cb-4fcb-9415-2081423a6a6c']">AMO</button>
+                        <button mat-menu-item
+                            [routerLink]="['/page/ancci', '38971da3-2730-47be-89c3-6578f885a2a5']">ANCCI</button>
+                        <button mat-menu-item
+                            [routerLink]="['/page/bolon', 'bc7199ba-8373-423b-a67f-4c69bf2b95f2']">BOLON</button>
+                        <button mat-menu-item
+                            [routerLink]="['/page/puma', '11f0a0b4-7ea8-495e-9d03-af4a60f957f6']">PUMA</button>
+                        <button mat-menu-item
+                            [routerLink]="['/page/gucci', '78455d00-4821-4337-8b05-f171786cffe2']">GUCCI</button>
+                    </mat-menu>
+                </li>
+                <li class="menu-list">
+                    <button routerLink="/page/blog-page">Blog</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,54 @@
+<div class="img-slider">
+        <app-img-slider [images]="imagesbanners" class="img-banner"></app-img-slider>
+</div>
+<div class="container">
+    <div class="product-slider">
+        <div class="slide-container">
+            <div class="slide-header">
+                <div>
+                    <h1><b>BỘ SƯU TẬP MỚI</b></h1>
+                </div>
+                <div>
+                    <button [routerLink]="['/page/bolon', 'bc7199ba-8373-423b-a67f-4c69bf2b95f2']">
+                        Xem tất cả >
+                    </button>
+                </div>
+            </div>
+            <div class="product-details">
+                <app-product-slider></app-product-slider>
+            </div>
+        </div>
+    </div>
+    <div class="supplier">
+        <div>
+            <h1><b>THƯƠNG HIỆU</b></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <a [routerLink]="['/page/amo', '53b18442-e9cb-4fcb-9415-2081423a6a6c']">
+                    <img src="../../assets/slider-img/sup_amo.jpg" alt="AMO">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a [routerLink]="['/page/ancci', '38971da3-2730-47be-89c3-6578f885a2a5']">
+                    <img src="../../assets/slider-img/supp_ancci.jpg" alt="Ancci">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a [routerLink]="['/page/bolon', 'bc7199ba-8373-423b-a67f-4c69bf2b95f2']">
+                    <img src="../../assets/slider-img/sup_bolon.jpg" alt="Bolon">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a [routerLink]="['/page/puma', '11f0a0b4-7ea8-495e-9d03-af4a60f957f6']">
+                    <img src="../../assets/slider-img/sup_puma.jpg" alt="Puma">
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a [routerLink]="['/page/gucci', '78455d00-4821-4337-8b05-f171786cffe2']">
+                    <img src="../../assets/slider-img/supp_gucci.jpg" alt="Gucci">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

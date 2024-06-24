@@ -1,0 +1,181 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.cart-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h4 {
+        flex: 1;
+        display: contents;
+    }
+
+    h3 {
+        flex: 1;
+    }
+}
+
+.cart-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    flex: 1;
+    margin-right: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+.price,
+.total{
+    color: red;
+}
+
+.product-name{
+    overflow: hidden;
+}
+
+.product-name img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.bor-quantity{
+    border: 1px solid #ccc;
+    text-align: center ;
+    border-radius: 40px;
+}
+
+.quantity .bor-quantity button {
+    padding: 4px 8px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.dele button{
+    border: none;
+    padding: 4px 8px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+button{
+    background-color: #fff;
+}
+
+.action button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.action button:hover {
+    color: darkred;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.empty-cart p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.quantity .button,
+.dele .button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 30%;
+    margin-left: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtotal-section,
+.discount-section,
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.total-price,
+.sum-price{
+    margin-top: 15px;
+    font-size: 20px;
+    color: red;
+}
+
+.total-section{
+    margin-top: auto;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(240, 46, 46);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: #740707;
+}
+
+.payment-container h3 {
+    margin-top: 10px;
+}

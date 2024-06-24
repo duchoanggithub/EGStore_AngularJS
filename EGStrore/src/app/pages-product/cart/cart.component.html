@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="cart-container" *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="cart-info">
+      <h3><b>Giỏ hàng của bạn</b></h3>
+      <h4>Tổng số sản phẩm: {{ cartItems.length }}</h4>
+    </div>
+    <mat-divider></mat-divider>
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tổng giá</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td class="product-name">
+            <img [src]="item.prodImg" alt="{{ item.prodName }}" width="80" height="80">
+            {{ item.prodName }}
+          </td>
+          <td class="price">
+            <span>{{ item.price | number: '1.0-0' }}đ</span>
+          </td>
+          <td class="quantity">
+            <div class="bor-quantity">
+              <button (click)="decreaseQuantity(item)">-</button>
+              <span>{{ item.quantity }}</span>
+              <button (click)="increaseQuantity(item)">+</button>
+            </div>
+          </td>
+          <td class="total">
+            <span>{{ ItemSum(item) | number: '1.0-0' }}đ</span>
+          </td>
+          <td class="dele">
+            <button (click)="removeItemFromCart(item)">x</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="payment-container" *ngIf="cartItems.length > 0">
+    <div class="subtotal-section">
+      <div>
+        <h3>Tạm tính:</h3>
+      </div>
+      <div class="total-price">
+        <span>{{ totalPrice | number: '1.0-0' }}đ</span>
+      </div>
+    </div>
+    <div class="discount-section">
+      <div>
+        <h4>Giá giảm:</h4>
+      </div>
+      <div class="discout-price">
+        <span>0đ</span>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="total-section">
+      <div>
+        <h3>Tổng tiền:</h3>
+      </div>
+      <div class="sum-price">
+        <span >{{ totalPrice | number: '1.0-0' }}đ</span>
+      </div>
+    </div>
+    <button class="payment-button" (click)="goToCheckout()">TIẾN HÀNH THANH TOÁN</button>
+  </div>
+</div>
+<ng-template #emptyCart>
+  <div class="empty-cart">
+    <p>Giỏ hàng trống.</p>
+  </div>
+</ng-template>

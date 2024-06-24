@@ -1,0 +1,92 @@
+<div class="container" *ngIf="product">
+    <div class="left-section">
+        <div class="image-product">
+            <img [src]="product.prodImg" alt="{{ product.prodName }}" class="image-product">
+        </div>
+        <mat-divider></mat-divider>
+        <div class="info-product-1">
+            <h2><b>THÔNG SỐ SẢN PHẨM</b></h2>
+            <div class="info">
+                <span>
+                    <p>Tên: {{product.prodName}}</p>
+                </span>
+                <span>
+                    <p>Mã: {{product.prodCode}}</p>
+                </span>
+                <span>
+                    <p>Xuất xứ: {{product.origin}}</p>
+                </span>
+                <span>
+                    <p>Giới tính: {{product.sex ? 'Nam' : 'Nữ'}}</p>
+                </span>
+                <span>
+                    <p>Kiểu dáng: {{product.designs}}</p>
+                </span>
+                <span>
+                    <p>Chất liệu: {{product.frameMaterial}}</p>
+                </span>
+                <span>
+                    <p>Màu gọng: {{product.color}}</p>
+                </span>
+                <span>
+                    <p>Phù hợp với: {{product.suitable}}</p>
+                </span>
+                <span>
+                    <p>UV: {{product.uv ? 'Có' : 'Không'}}</p>
+                </span>
+                <span>
+                    <p>Mô tả: {{product.describe}}</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="info-product-2">
+            <div class="colum">
+                <p>{{product.supName}}</p>
+                <h2><b>{{product.prodName}}</b></h2>
+            </div>
+            <div class="colum-1">
+                <span>Tình trạng: {{product.status ? 'Còn hàng' : 'Hết hàng' }}</span>
+                <span>Mã: {{product.prodCode}}</span>
+                <span>Xuất xứ: {{product.origin}}</span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="price-row">
+                <span class="price-label">Giá: </span>
+                <span class="price-value">{{product.price | number: '1.0-0'}}đ</span>
+                <div class="price-info">
+                    <h3>Trả sau {{product.price / 2 | number: '1.0-0'}}đ với x2 <img
+                            src="https://assets.fundiin.vn/merchant/logo_transparent.png" alt="" class="img-price"></h3>
+                </div>
+            </div>
+        </div>
+        <div class="info-product-3">
+            <div class="color-container">
+                <span class="color-label">Màu sắc</span>
+                <span class="color-value">{{product.color}}</span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="promotion-container">
+                <div>
+                    <span class="icon-gift"><i class="fa fa-gift"></i>KHUYẾN MÃI</span>
+                </div>
+                <div>
+                    <span>
+                        <p>Nhập mã WELCOME200 giảm ngay 200k cho đơn hàng từ 1,500,000đ</p>
+                        <p>- Chỉ áp dụng khi mua hàng tại website hoặc fanpage Mắt Việt.</p>
+                        <p>- Không áp dụng cho hàng giảm giá và các khuyến mãi khác.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="container-cart">
+                <div class="quantity-control">
+                    <button (click)="decreaseQuantity()">-</button>
+                    <span>{{ quantity }}</span>
+                    <button (click)="increaseQuantity()">+</button>
+                </div>
+                <button (click)="addToCart(product)">Thêm vào giỏ hàng +<i class="fa fa-cart-shopping"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

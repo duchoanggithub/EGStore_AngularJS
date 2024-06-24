@@ -1,0 +1,53 @@
+<mat-card class="user-card">
+    <div *ngIf="user" class="user-container">
+        <div class="user-ava">
+            <img class="avatar"
+                [src]="user.avatarUrl ? '../../assets/ava/' + user.avatarUrl : '../../assets/ava/default_ava_user.png'"
+                alt="{{ user.avatarUrl }}" />
+            <p class="user-id">ID: {{ user.id }}</p>
+            <p class="user-role">Vai trò: {{ user.roleName }}</p>
+            <p class="user-active">Trạng thái: {{ user.isActive ? 'Active' : 'No Active' }}</p>
+            <p class="user-created">Ngày tạo: {{ user.createDay }}</p>
+            <p class="user-updated">Ngày cập nhật: {{ user.updateDay }}</p>
+        </div>  
+        <div class="user-info">
+            <div class="user-detail">
+                <div class="user-name">
+                    <span>Họ và tên:</span>
+                    <input type="text" [(ngModel)]="user.name" readonly>
+                </div>
+                <div class="user-phone">
+                    <span>Số điện thoại:</span>
+                    <input type="text" [(ngModel)]="user.phone" readonly>
+                </div>
+                <div class="user-address">
+                    <span>Địa chỉ:</span>
+                    <input type="text" [(ngModel)]="user.address" readonly>
+                </div>
+                <div class="user-birthday">
+                    <span>Ngày sinh:</span>
+                    <input type="date" [(ngModel)]="user.birthDay" readonly>
+                </div>
+                <div class="user-gender">
+                    <p>Giới tính: {{user.sex ? 'Nam' : 'Nữ'}}</p>
+                </div>
+            </div>
+            <div class="user-account">
+                <div class="user-name">
+                    <span>Tài khoản:</span>
+                    <input type="text" [(ngModel)]="user.userName" readonly>
+                </div>
+                <div class="user-email">
+                    <span>Email:</span>
+                    <input type="text" [(ngModel)]="user.email" readonly>
+                </div>
+            </div>
+            <div class="change-pas">
+                <div class="user-password">
+                    <span>Mật khẩu:</span>
+                    <input type="password" [(ngModel)]="user.password" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

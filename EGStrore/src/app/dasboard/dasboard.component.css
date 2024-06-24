@@ -1,0 +1,94 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .row {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.col-md-4 {
+    flex: 0 0 calc(33.333% - 20px);
+}
+
+.card {
+    margin: 10px 0;
+    text-align: left;
+    width: 250px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.card-body {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.card-body-product {
+    border-left: 5px solid ; 
+    background-color: #ffffff; /* Đổi màu nền của thẻ về trắng */
+    border-left-color: #ffb938; /* Đổi màu của đường trái thành màu tương ứng */
+}
+
+.card-body-user {
+    border-left: 5px solid ; 
+    background-color: #ffffff; /* Đổi màu nền của thẻ về trắng */
+    border-left-color: #46e546; /* Đổi màu của đường trái thành màu tương ứng */
+}
+
+.card-body-blog {
+    border-left: 5px solid ; 
+    background-color: #ffffff; /* Đổi màu nền của thẻ về trắng */
+    border-left-color: #338be4; /* Đổi màu của đường trái thành màu tương ứng */
+}
+
+.card-body-order {
+    border-left: 5px solid ; 
+    background-color: #ffffff; /* Đổi màu nền của thẻ về trắng */
+    border-left-color: #f02f2f; /* Đổi màu của đường trái thành màu tương ứng */
+}
+
+.card-body-sums {
+    border-left: 5px solid ; 
+    background-color: #ffffff; /* Đổi màu nền của thẻ về trắng */
+    border-left-color: #f7e11e; /* Đổi màu của đường trái thành màu tương ứng */
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.card-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0;
+}
+
+.icon-container {
+    width: 45px;
+    height: 45px;
+    background-color: #dad9d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.icon-container i {
+    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}

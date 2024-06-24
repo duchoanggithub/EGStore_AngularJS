@@ -1,0 +1,46 @@
+<section>
+    <div class="all-banner">
+        <picture>
+            <source media="(min-width: 800px)" srcset="../../../assets/prodimg/banner_amo.jpg">
+            <source media="(min-width: 500px)" srcset="../../../assets/prodimg/banner_amo.jpg">
+            <img src="../../../assets/prodimg/banner_amo.jpg" alt="Banner Image">
+        </picture>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="filter-sidebar">
+                    <h2>Lọc theo</h2>
+                    <mat-divider></mat-divider>
+                    <h4>Theo loại sản phẩm</h4>
+                    <div *ngFor="let cate of cates">
+                        <mat-checkbox [id]="cate.id" (change)="onCategoryChange($event, cate.id)">
+                            {{ cate.cateProdName }}
+                        </mat-checkbox>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h2 style="
+                    margin-top: 15px;
+                    margin-left: 18px;">Kính AMO</h2>
+                <mat-grid-list cols="4" rowHeight="1:1.6" gutterSize="20px">
+                    <mat-grid-tile *ngFor="let product of filteredProducts  | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                        <a [routerLink]="['/page/detail-category-product', product.id]" class="product-link">
+                            <div class="product-card">
+                                <img [src]="product.prodImg" alt="{{ product.prodName }}" class="product-image">
+                                <div class="product-details">
+                                    <h3>{{ product.prodName }}</h3>
+                                    <p>{{ product.price | number: '1.0-0' }}đ</p>
+                                </div>
+                            </div>
+                        </a>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <div>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

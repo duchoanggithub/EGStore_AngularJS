@@ -1,0 +1,51 @@
+.container {
+    margin-top: 20px;
+}
+
+.col-md-8,
+.col-md-4{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    margin-top: 20px;
+}
+
+.blog-content p {
+    text-align: justify;
+}
+
+.sidebar {
+    margin-top: 20px;
+   
+}
+
+.sidebar h3 {
+    text-align: center;
+}
+
+.sidebar-card {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.sidebar-image {
+    max-width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.sidebar-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

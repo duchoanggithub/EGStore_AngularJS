@@ -1,0 +1,18 @@
+<div class="slideshow-wrapper" [ngClass]="{'small': config.isSmall}">
+    <div class="slideshow-container">
+        <a [routerLink]="['/page/bolon', 'bc7199ba-8373-423b-a67f-4c69bf2b95f2']">
+            <img *ngFor="let image of images; let i = index" [src]="image" class="slide"
+            [class.hidden]="i !== currentIndex">
+        </a>
+        <button *ngIf="!config.disableButtons" class="prev" (click)="previousSlide()">
+            <i class="fa fa-arrow-left"></i>
+        </button>
+        <button *ngIf="!config.disableButtons" class="next" (click)="nextSlide()">
+            <i class="fa fa-arrow-right"></i>
+        </button>
+        <div *ngIf="!config.disableDots" class="dots-container">
+            <span *ngFor="let image of images; let i = index" class="dot" [class.active]="i === currentIndex"
+                (click)="goToSlide(i)"></span>
+        </div>
+    </div>
+</div>

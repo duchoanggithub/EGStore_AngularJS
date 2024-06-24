@@ -1,0 +1,63 @@
+<div class="head" [ngClass]="getHeadClass()">
+    <div class="head-content">
+        <div class="head-content-left">
+            <div class="search-container">
+                <div *ngIf="!canShowSearchAsOverlay" class="normal-search">
+                    <input type="search" class="search" name="" id="" placeholder="Search..." >
+                    <i class="far fa-search search-icon"></i>
+                </div>
+                <div *ngIf="canShowSearchAsOverlay">
+                    <button [cdkMenuTriggerFor]="searchOverlay" class="search-menu-btn ripple">
+                        <i class="far fa-search search-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="head-content-right">
+            <div class="head-menu">
+            </div>
+            <div class="head-user-avatar-container">
+                <div class="head-user-avatar" [cdkMenuTriggerFor]="userOverlay">
+                    <img src="../../assets/ava/vit.png" alt="user" class="user-avatar">
+                    <div class="circle-indicator pulse"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #searchOverlay>
+    <div class="overlay overlay-search overlay-fall" cdkMenu>
+        <input type="search" class="search" name="" id="" placeholder="Search..." />
+        <button class="search-btn">
+            <i class="far fa-search search-icon"></i>
+        </button>
+    </div>
+</ng-template>
+
+<ng-template #userOverlay>
+    <div class="overlay overlay-user overlay-fall" cdkMenu>
+        <ul>
+            <ng-container *ngFor="let item of userItems">
+                <li *ngIf="item.isHome" cdkMenuItem>
+                    <a [routerLink]="['page/home']">
+                        <i class="icon" [ngClass]="item.icon"></i>
+                        <span>{{item.label}}</span>
+                    </a>
+                </li>
+                <li *ngIf="!item.isLogout && !item.isHome" cdkMenuItem> <!-- Chỉ hiển thị nếu không phải mục "Logout" hoặc "Home" -->
+                    <a>
+                        <i class="icon" [ngClass]="item.icon"></i>
+                        <span>{{item.label}}</span>
+                    </a>
+                </li>
+                <li *ngIf="item.isLogout" cdkMenuItem>
+                    <a (click)="logout()">
+                        <i class="icon" [ngClass]="item.icon"></i>
+                        <span>{{item.label}}</span>
+                    </a>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</ng-template>

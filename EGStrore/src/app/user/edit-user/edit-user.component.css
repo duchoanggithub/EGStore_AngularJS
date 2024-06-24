@@ -1,0 +1,55 @@
+.mat-card {
+    width: 600px;
+    margin: auto;
+    padding: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+  .header-container {
+    margin-bottom: 15px;
+
+    
+  }
+  
+  .header-container h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  
+  .mat-mdc-card-header {
+    display: flex;
+    padding: 8px;
+  }
+  
+  .input-row {
+    margin-bottom: 5px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  
+  }
+  
+  .mat-form-field {
+    display: block;
+  }
+  
+  .mat-error {
+    color: #d32f2f;
+    font-size: 12px;
+  }
+  
+  .button-row {
+    display: flex;
+  }
+  
+  .button-row button {
+    margin-left: 10px;
+  }
+  
+  
+  .mat-checkbox {
+    margin-top: 6px
+  }

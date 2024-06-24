@@ -1,0 +1,29 @@
+.head-title{
+    display: flex;
+    align-items: center;
+
+    button{
+        transform: scale(0.75);
+    }
+}
+
+h1{
+    flex-grow: 1;
+}
+table{
+    text-align: center;
+    .table-cell {
+        vertical-align: top;
+    }
+    
+    .button-icon{
+        transform: scale(0.8);
+    }  
+}
+.mat-column-blogImg {
+    width: 80px;
+}
+img {
+    max-width: 70px;
+    max-height: 70px;
+}

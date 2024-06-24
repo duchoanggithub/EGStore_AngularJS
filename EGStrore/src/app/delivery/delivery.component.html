@@ -1,0 +1,68 @@
+<div class="head-title">
+    <h1>Danh sách chuyển phát</h1>
+    <button mat-fab color="accent" (click)="OpenDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="deliverys" matSort >
+  
+      <!-- STT Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let delivery"> {{delivery.id}} </td>
+      </ng-container>
+  
+      <!-- delivery ID Column -->
+      <ng-container matColumnDef="deliveryName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tên chuyển phát</th>
+        <td mat-cell *matCellDef="let delivery"> {{delivery.deliveryName}} </td>
+      </ng-container>
+  
+      <!-- delivery ID Column -->
+      <ng-container matColumnDef="deliPhone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> SĐT</th>
+        <td mat-cell *matCellDef="let delivery"> {{delivery.deliPhone}} </td>
+      </ng-container>
+      
+      <!-- Username Column -->
+      <ng-container matColumnDef="createDay">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ngày tạo </th>
+        <td mat-cell *matCellDef="let delivery"> {{delivery.createDay}} </td>
+      </ng-container>
+  
+      <!-- Password Column -->
+      <ng-container matColumnDef="updateDay">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ngày cập nhật </th>
+        <td mat-cell *matCellDef="let delivery"> {{delivery.updateDay}} </td>
+      </ng-container>
+  
+      <!-- IsActive Column -->
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Trạng thái </th>
+        <td mat-cell *matCellDef="let delivery">
+          {{ delivery.isActive ?'Active' : 'No Active' }}
+        </td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Chức năng </th>
+        <td mat-cell *matCellDef="let delivery">
+          <button class="button-icon" mat-icon-button matTooltip="primary" color="primary"
+            [routerLink]="['./edit', delivery.id]">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button class="button-icon" mat-icon-button matTooltip="warn" color="warn" (click)="deleteDelivery(delivery.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let delivery; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of deliverys" [pageSize]="5">
+    </mat-paginator>
+  </div>

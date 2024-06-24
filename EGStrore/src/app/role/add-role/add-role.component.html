@@ -1,0 +1,30 @@
+<div>
+    <h2 mat-dialog-title>Thêm quyền mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="addroleForm">
+            <div class="row">
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Tên quyền</mat-label>
+                            <input matInput placeholder="Tên quyền" formControlName="roleName">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Mô tả</mat-label>
+                            <input matInput placeholder="Mô tả" formControlName="describe">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-checkbox formControlName="isActive">Kích hoạt</mat-checkbox>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

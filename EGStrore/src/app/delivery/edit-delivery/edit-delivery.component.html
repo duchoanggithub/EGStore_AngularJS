@@ -1,0 +1,37 @@
+<mat-card class="mat-card">
+    <mat-card-header class="header-container">
+        <h2>Sửa thông tin đơn vị chuyển phát</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="EditForm">
+            <div class="input-row">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Tên đơn vị chuyển phát</mat-label>
+                    <input matInput placeholder="Tên đơn vị chuyển phát" formControlName="deliveryName">
+                    <mat-error *ngIf="EditForm.get('deliveryName')?.hasError('required')">
+                        Tên đơn vị chuyển phát không được để trống
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-form-field class="example-full-width">
+                    <mat-label>SĐT</mat-label>
+                    <input matInput placeholder="SĐT" formControlName="deliPhone">
+                    <mat-error *ngIf="EditForm.get('deliPhone')?.hasError('required')">
+                        SĐT không được để trống
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-checkbox formControlName="isActive">IsActive</mat-checkbox>
+            </div>
+
+            <div class="button-row">
+                <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Cập nhật</button>
+                <button mat-raised-button color="warn" type="submit" (click)="closeEdit()">Quay lại</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

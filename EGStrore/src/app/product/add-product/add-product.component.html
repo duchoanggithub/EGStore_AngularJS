@@ -1,0 +1,126 @@
+<div>
+    <h2 mat-dialog-title>Thêm sản phẩm mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="addprodForm">
+            <div class="row">
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Tên sản phẩm</mat-label>
+                            <input matInput placeholder="Tên sản phẩm" formControlName="prodName">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Mã SP</mat-label>
+                            <input matInput placeholder="Mã SP" formControlName="prodCode">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Giá</mat-label>
+                            <input matInput placeholder="Giá" formControlName="price">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Giá giảm</mat-label>
+                            <input matInput placeholder="Giá giảm" formControlName="discount">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Tồn kho</mat-label>
+                            <input matInput placeholder="Tồn kho" formControlName="inventory">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Màu</mat-label>
+                            <input matInput placeholder="Màu" formControlName="color">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Xuất xứ</mat-label>
+                            <input matInput placeholder="Xuất xứ" formControlName="origin">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Kiểu dáng</mat-label>
+                            <input matInput placeholder="Kiểu dáng" formControlName="designs">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Chất liệu</mat-label>
+                            <input matInput placeholder="Chất liệu" formControlName="frameMaterial">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Hợp với</mat-label>
+                            <input matInput placeholder="Hợp với" formControlName="suitable">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Mô tả</mat-label>
+                            <input matInput placeholder="Mô tả" formControlName="describe">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Ảnh</mat-label>
+                            <input matInput placeholder="Ảnh" formControlName="prodImg">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-radio-group  formControlName="sex">
+                            <mat-label><b>Giới tính:</b></mat-label>
+                            <mat-radio-button value="true">Nam</mat-radio-button>
+                            <mat-radio-button value="false">Nữ</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="input-row">
+                        <mat-radio-group  formControlName="uv">
+                            <mat-label><b>UV:</b></mat-label>
+                            <mat-radio-button value="true">Có</mat-radio-button>
+                            <mat-radio-button value="false">Không</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="input-row">
+                        <mat-checkbox formControlName="status">Trạng thái</mat-checkbox>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Loại</mat-label>
+                            <mat-select formControlName="categoryId">
+                                <mat-option *ngFor="let cate of cates" [value]="cate.id">
+                                    {{ cate.cateProdName }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Hãng</mat-label>
+                            <mat-select formControlName="supId">
+                                <mat-option *ngFor="let sup of sups" [value]="sup.id">
+                                    {{ sup.supName }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

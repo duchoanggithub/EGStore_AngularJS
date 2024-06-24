@@ -1,0 +1,78 @@
+.user-card {
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.user-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.user-ava {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    flex: 1;
+    margin-top: 40px;
+}
+
+.user-detail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.user-name,
+.user-phone,
+.user-address,
+.user-birthday,
+.user-gender {
+    flex: 1 50%;
+    margin-bottom: 10px;
+}
+
+.user-name span,
+.user-phone span,
+.user-address span,
+.user-birthday span,
+.user-gender span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-gender input[type="radio"] {
+    margin-right: 5px;
+}
+
+.user-account,
+.change-pas {
+    margin-top: 20px;
+}
+
+.user-account input[type="text"],
+.change-pas input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+input {
+    height: 30px;
+}

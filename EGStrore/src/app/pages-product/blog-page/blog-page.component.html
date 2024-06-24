@@ -1,0 +1,28 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 style="
+                    margin-top: 15px;
+                    margin-left: 18px;">Tất cả bài viết</h2>
+                <mat-grid-list cols="3" rowHeight="1.6:2" gutterSize="20px">
+                    <mat-grid-tile
+                        *ngFor="let blog of blogs  | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
+                        <a [routerLink]="['/page/blog-detail', blog.id]" class="blog-link">
+                            <div class="blog-card">
+                                <img [src]="blog.blogImg" alt="{{ blog.title }}" class="blog-image">
+                                <div class="blog-details">
+                                    <h3>{{ blog.title }}</h3>
+                                    <p>{{ blog.author }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <div>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

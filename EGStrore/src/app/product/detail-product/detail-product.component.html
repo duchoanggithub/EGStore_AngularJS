@@ -1,0 +1,26 @@
+<div class="product-details">
+  <div *ngIf="product" class="container-prod">
+    <div class="product-info">
+      <div class="product-image">
+        <img [src]="product.prodImg" alt="Product Image">
+      </div>
+      <div class="details">
+        <h2>{{ product.prodName }}</h2>
+        <p><strong>Mã:</strong> {{ product.prodCode }}</p>
+        <p><strong>Giá:</strong> {{ product.price | number: '1.0-0' }}đ</p>
+        <p><strong>Giá giảm:</strong> {{ product.discount | number: '1.0-0' }}đ</p>
+        <div class="extra-details">
+          <p><strong>Xuất xứ:</strong> {{ product.origin }}</p>
+          <p><strong>Giới tính:</strong> {{ product.sex ? 'Nam' : 'Nữ' }}</p>
+          <p><strong>Kiểu dáng:</strong> {{ product.designs }}</p>
+          <p><strong>Chất liệu:</strong> {{ product.frameMaterial }}</p>
+          <p><strong>Màu gọng:</strong> {{ product.color }}</p>
+          <p><strong>Phù hợp với:</strong> {{ product.suitable }}</p>
+          <p><strong>UV:</strong> {{ product.uv ? 'Có' : 'Không' }}</p>
+          <p><strong>Mô tả:</strong> {{ product.describe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button mat-raised-button color="warn" type="submit" (click)="closeDetail()">Quay lại</button>
+</div>

@@ -1,0 +1,28 @@
+/* Đặt khoảng cách và căn chỉnh các phần tử trong form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Đặt kích thước và khoảng cách cho các trường trong form */
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-checkbox {
+    margin-top: 16px;
+  }
+  
+  /* Căn chỉnh các nút hành động trong dialog */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  /* Đặt khoảng cách cho nút hủy */
+  button[mat-button] {
+    min-width: 64px;
+  }
+  

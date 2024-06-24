@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background: #f4f7fa;
+}
+.table {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100%;
+    padding-top: 1rem;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+    color: #495057;
+    overflow: auto; /* Thêm thanh cuộn nếu nội dung vượt quá kích thước bảng */
+  }
+  
+  /* Áp dụng border-collapse cho phần tử table */
+  .table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table thead {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #edf1f7;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .table tbody {
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Cài đặt độ rộng cho các cột */
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  /* Tùy chỉnh màu nền của các hàng chẵn */
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

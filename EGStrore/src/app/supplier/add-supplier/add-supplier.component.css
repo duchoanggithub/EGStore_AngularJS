@@ -1,0 +1,28 @@
+/* Đảm bảo rằng tiêu đề và nội dung của dialog được căn giữa */
+mat-dialog-content,
+h2[mat-dialog-title] {
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Đảm bảo rằng nội dung của dialog không bị tràn ra khỏi khung dialog */
+mat-dialog-content {
+    overflow: auto;
+}
+
+/* Thêm padding để tạo khoảng cách giữa các thành phần trong dialog */
+mat-form-field,
+mat-checkbox {
+    display: block;
+   margin: auto;
+}
+
+/* Thêm padding cho button */
+mat-dialog-actions button {
+    padding: 8px 16px;
+}
+
+/* Đảm bảo rằng button được căn phải */
+mat-dialog-actions {
+    justify-content: flex-end;
+}

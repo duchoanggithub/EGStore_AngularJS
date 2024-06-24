@@ -1,0 +1,30 @@
+<div>
+    <h2 mat-dialog-title>Thêm đơn vị chuyển phát mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="adddeliveryForm">
+            <div class="row">
+                <div class="column">
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>Tên đơn vị chuyển phát</mat-label>
+                            <input matInput placeholder="Tên đơn vị chuyển phát" formControlName="deliveryName">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <mat-label>SĐT</mat-label>
+                            <input matInput placeholder="SĐT" formControlName="deliPhone">
+                        </mat-form-field>
+                    </div>
+                    <div class="input-row">
+                        <mat-checkbox formControlName="isActive">Kích hoạt</mat-checkbox>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

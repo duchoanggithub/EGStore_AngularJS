@@ -1,0 +1,37 @@
+<div>
+    <h2 mat-dialog-title>Thêm nhà tài trợ mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="addsupForm">
+            <mat-form-field>
+                <mat-label>Tên nhà nhà tài trợ</mat-label>
+                <input matInput placeholder="Tên nhà cung cấp" formControlName="supName">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Tên người liên hệ</mat-label>
+                <input matInput placeholder="Tên người liên hệ" formControlName="contactPerson">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Số điện thoại</mat-label>
+                <input matInput placeholder="Số điện thoại" formControlName="phoneContact">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Địa chỉ</mat-label>
+                <input matInput placeholder="Địa chỉ" formControlName="address">
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+            </mat-form-field>
+
+            <mat-checkbox formControlName="isActive">Kích hoạt</mat-checkbox>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

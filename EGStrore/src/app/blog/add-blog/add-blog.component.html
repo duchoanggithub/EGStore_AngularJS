@@ -1,0 +1,28 @@
+<div>
+    <h2 mat-dialog-title>Thêm bài viết mới</h2>
+    <mat-dialog-content class="mat-typography" style="background-color: #fff;">
+        <form [formGroup]="addblogForm">
+            <mat-form-field appearance="fill">
+                <mat-label>Tiêu đề</mat-label>
+                <input matInput formControlName="title" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Tác giả</mat-label>
+                <input matInput formControlName="author" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Nội dung</mat-label>
+                <textarea matInput formControlName="content" rows="5" ></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Ảnh bìa URL</mat-label>
+                <input matInput formControlName="blogImg">
+            </mat-form-field>
+            <mat-checkbox formControlName="isActive">Kích hoạt</mat-checkbox>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button mat-button (click)="onNoClick()">Hủy</button>
+        <button mat-button (click)="onSubmit()">Thêm</button>
+    </mat-dialog-actions>
+</div>

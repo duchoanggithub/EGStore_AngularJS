@@ -1,0 +1,86 @@
+<div class="checkout-container">
+    <div class="checkout-form">
+        <form>
+            <div>
+                <h3>Thông tin đặt hàng</h3>
+                <div>
+                    <label for="cusName">Tên khách hàng:</label>
+                    <input type="text" id="cusName" name="cusName" required [(ngModel)]="user.name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required [(ngModel)]="user.email">
+                    <label for="cusPhone">Số điện thoại:</label>
+                    <input type="text" id="cusPhone" name="cusPhone" required [(ngModel)]="user.phone">
+                </div>
+            </div>
+            <div>
+                <h3>Địa chỉ giao hàng</h3>
+                <div>
+                    <label for="address">Địa chỉ:</label>
+                    <input type="text" id="address" name="address" required [(ngModel)]="user.address">
+                </div>
+                <div>
+                    <label for="notePay">Ghi chú:</label>
+                    <textarea id="notePay" name="notePay" ></textarea>
+                </div>
+            </div>
+            <div>
+                <h3>Dịch vụ chuyển phát</h3>
+                <div>
+                    <label for="deliveryId">Dịch vụ chuyển phát:</label>
+                    <select id="deliveryId" name="deliveryId">
+                        <option *ngFor="let deli of delis" [value]="deli.id">
+                            {{deli.deliveryName}}
+                        </option>    
+                    </select>
+                </div>
+            </div>
+            <div class="payment-methods">
+                <h3>Phương thức thanh toán</h3>
+                <div>
+                    <input type="checkbox" id="cash" name="paymentMethods" value="cash">
+                    <label for="cash">Thanh toán khi nhận hàng (COD)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="card" name="paymentMethods" value="card">
+                    <label for="card">Chuyển khoản qua ngân hàng</label>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit" >Đặt hàng</button>
+                <button type="button" [routerLink]="['/page/cart']">Giỏ hàng</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <div class="checkout-summary">
+        <ul>
+            <li *ngFor="let item of cartItems" class="cart-item">
+                <div class="product-image-container">
+                    <img [src]="item.prodImg" alt="{{ item.prodName }}" width="50" height="50">
+                    <span class="product-quantity">{{ item.quantity }}</span>
+                </div>
+                {{ item.prodName }}
+                <span>{{ item.price | number: '1.0-0' }}đ</span>
+            </li>
+        </ul>
+        <mat-divider></mat-divider>
+        <div>
+            <div class="tt-price">
+                <h4>Tạm tính:</h4>
+                <span>{{ totalPrice | number: '1.0-0' }}đ</span>
+            </div>
+            <div class="deli-price">
+                <h4>Phí vận chuyển</h4>
+                <span>Miễn phí</span>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="total-price">
+            <h4>Tổng tiền:</h4>
+            <span>{{ totalPrice | number: '1.0-0' }}đ</span>
+        </div>
+    </div>
+</div>

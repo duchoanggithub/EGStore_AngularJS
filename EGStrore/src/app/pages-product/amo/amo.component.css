@@ -1,0 +1,113 @@
+/* Add some basic styling to the container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.all-banner img {
+    margin: 0 auto; 
+    display: block; 
+    max-width: 80%; 
+}
+
+mat-grid-list{
+    margin: 10px;
+}
+
+mat-divider{
+    margin-bottom: 8px;
+}
+
+mat-grid-tile {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+mat-grid-tile:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+/* Style the product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-details {
+    text-align: left;
+}
+
+.product-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Style the pagination controls */
+pagination-controls {
+    margin-top: 20px;
+    text-align: center;
+   
+}
+
+pagination-controls ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+}
+
+pagination-controls li {
+    margin: 0 10px;
+}
+
+pagination-controls a {
+    text-decoration: none;
+}
+
+
+pagination-controls .current {
+    font-weight: bold;
+    color: #23527c;
+}
+
+a.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.filter-sidebar {
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.filter-sidebar h4 {
+    margin-top: 0;
+}
+
+.filter-sidebar div {
+    margin-bottom: 10px;
+}
+
+.filter-sidebar label {
+    margin-left: 5px;
+}

@@ -1,0 +1,37 @@
+<mat-card class="mat-card">
+    <mat-card-header class="header-container">
+        <h2>Sửa thông tin loại sản phẩm</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="EditForm">
+            <div class="input-row">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Tên loại sản phẩm</mat-label>
+                    <input matInput placeholder="Tên loại sản phẩm" formControlName="cateProdName">
+                    <mat-error *ngIf="EditForm.get('cateProdName')?.hasError('required')">
+                        Tên loại sản phẩm không được để trống
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mô tả</mat-label>
+                    <input matInput placeholder="Mô tả" formControlName="describe">
+                    <mat-error *ngIf="EditForm.get('describe')?.hasError('required')">
+                        Mô tả không được để trống
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-row">
+                <mat-checkbox formControlName="isActive">IsActive</mat-checkbox>
+            </div>
+
+            <div class="button-row">
+                <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Cập nhật</button>
+                <button mat-raised-button color="warn" type="submit" (click)="closeEdit()">Quay lại</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

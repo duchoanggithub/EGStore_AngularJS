@@ -1,0 +1,236 @@
+.mat-toolbar-row {
+    background-color: #ffcd00;
+    padding: 0 150px 0 150px;
+    height: 80px;
+}
+
+.wrapper-header {
+    background-color: yellow;
+}
+
+.wrapper-logo {
+    padding-right: 70px;
+}
+
+/* .wrapper-search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.wrapper-search input[type="search"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.wrapper-search mat-icon {
+    cursor: pointer;
+    color: #757575;
+    margin-left: 10px;
+} */
+/* Wrapper cho phần tìm kiếm */
+
+.wrapper-search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 430px;
+}
+
+/* Container của ô tìm kiếm */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Ô tìm kiếm */
+.search {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search:focus {
+    border-color: #007bff;
+}
+
+/* Icon tìm kiếm */
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+.product-image{
+    width: 20%;
+}
+
+/* Danh sách kết quả tìm kiếm */
+.search-results {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Từng mục kết quả tìm kiếm */
+.search-results li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-results li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style khi không có kết quả tìm kiếm */
+.no-results {
+    padding: 10px 15px;
+    color: #888;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .search-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.wrapper-compo-head {
+    display: flex;
+    align-items: center;
+    padding-left: 360px;
+}
+
+.wrapper-account {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+}
+
+.wrapper-account span {
+    display: block;
+    text-align: left;
+}
+
+.wrapper-account i {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 24px;
+    margin-left: 120px;
+}
+
+.wrapper-cart {
+    display: flex;
+    align-items: center;
+    transform: translateY(-5%);
+    margin-left: 160px;
+}
+
+.wrapper-cart button {
+    color: black;
+}
+
+.mat-toolbar {
+    background-color: yellow;
+    color: black;
+}
+
+
+.wrapper-menu {
+    background-color: #f8f8f8;
+    /* Example background color */
+    padding: 10px 0;
+}
+
+.wrapper-menu .contrainer {
+    display: flex;
+    justify-content: center;
+    /* Center the container */
+}
+
+.wrapper-menu ul {
+    list-style-type: none;
+    /* Remove list item markers */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    /* Space items evenly */
+    width: 100%;
+    max-width: 1200px;
+    /* Optional: Limit the maximum width */
+}
+
+.wrapper-menu .menu-list {
+    margin: 0 15px;
+    /* Optional: Adjust the space between items */
+}
+
+.wrapper-menu .menu-list button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    /* Add padding for better touch targets */
+    text-transform: uppercase;
+    /* Optional: Transform text to uppercase */
+}
+
+.wrapper-menu .menu-list button:hover {
+    background-color: #e0e0e0;
+    /* Example hover effect */
+    border-radius: 5px;
+    /* Optional: Add border radius */
+}
+
+.mat-menu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-menu .mat-menu-item {
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #333;
+}
+
+.mat-menu .mat-menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.mat-menu .mat-menu-item i {
+    margin-right: 10px;
+}
